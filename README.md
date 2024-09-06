@@ -621,19 +621,7 @@ Note that you need to include your Google Play services key in the sample to be 
 
 
  
-
-Apps using Location Picker
----------------
-
-The following is a list of some of the public apps using Location Picker and are published on the Google Play Store.
-
-Want to add your app? Found an app that no longer works or no longer uses Location Picker? Please submit a pull request on GitHub to update this page!
-
-| <a href="https://play.google.com/store/apps/details?id=com.anuntis.segundamano"><img src="docs/images/vibbo_logo.png" align="left" width="68px" height="68px"/></a> | <a href="https://play.google.com/store/apps/details?id=com.scmspain.worksi"><img src="docs/images/worksi_logo.png" align="left" width="68px" height="68px"/></a> | <a href="https://play.google.com/store/apps/details?id=nl.hnogames.domoticz"><img src="docs/images/domoticz_logo.png" align="left" width="68px" height="68px"/></a>
-|---|---|---
-| [vibbo](https://play.google.com/store/apps/details?id=com.anuntis.segundamano) | [Worksi](https://play.google.com/store/apps/details?id=com.scmspain.worksi) | [Domoticz](https://play.google.com/store/apps/details?id=nl.hnogames.domoticz)
-
-
+ 
 Contribute
 ----------
 
@@ -645,17 +633,11 @@ Contribute
 6. Create a new Pull Request
 7. Profit! :white_check_mark:
 
-
-Bugs and Feedback
------------------
-
-For bugs, questions and discussions please use the [Github Issues](https://github.com/nmssalman/LocationPicker/issues).
-
-
+ 
 License
 -------
 
-Copyright 2016-2023 Adevinta Spain S.L.
+Copyright 2024 Mohamed Salman
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
