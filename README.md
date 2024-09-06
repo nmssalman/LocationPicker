@@ -1,5 +1,5 @@
 <!--
-  Title: Leku - Map location picker for Android
+  Title: Location Picker - Map location picker for Android
   Description: Google Maps based library for Android that returns a latitude, longitude and an address based on the location picked with the Activity provided.
   Author: AdevintaSpain
   -->
@@ -33,7 +33,7 @@ Component library for Android that uses Google Maps and returns a latitude, long
 |
 <b><a href="#who-made-this">Who Made This</a></b>
 |
-<b><a href="#apps-using-leku">Apps using Leku</a></b>
+<b><a href="#apps-using-leku">Apps using Location Picker</a></b>
 |
 <b><a href="#contribute">Contribute</a></b>
 |
@@ -74,6 +74,7 @@ Include the **mavenCentral** repository in your top `build.gradle`:
 ```groovy
 allprojects {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 ```
 
@@ -81,14 +82,14 @@ Include the dependency in your app `build.gradle`:
 
 ```groovy
 dependencies {
-    implementation 'com.adevinta.android:leku:11.1.4'
+    implementation 'com.github.nmssalman:LocationPicker:1.0'
 }
 ```
 
 Alternatively, if you are using a different version of Google Play Services and AndroidX use this instead:
 
 ```groovy
-implementation ('com.adevinta.android:leku:11.1.4') {
+implementation ('com.github.nmssalman:LocationPicker:1.0') {
     exclude group: 'com.google.android.gms'
     exclude group: 'androidx.appcompat'
 }
@@ -155,7 +156,7 @@ To use the LocationPickerActivity first you need to add these lines to your Andr
 
 ```xml
 <activity
-    android:name="com.adevinta.leku.LocationPickerActivity"
+    android:name="com.nmssalman.locationpicker.LocationPickerActivity"
     android:label="@string/leku_title_activity_location_picker"
     android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
     android:windowSoftInputMode="adjustPan"
@@ -235,7 +236,7 @@ That's all folks!
 
 #### Google Places
 
-Leku now supports Google Places queries using the search box. If you want to enable it these are the steps you need to follow:
+Location Picker now supports Google Places queries using the search box. If you want to enable it these are the steps you need to follow:
 
 1. Enable Google Places API for Android on your [google developer console](https://console.developers.google.com/).
 
@@ -463,7 +464,7 @@ val locationPickerIntent = LocationPickerActivity.Builder(context)
 
 You can define your custom data source. By default there are 2 `DataSources` which ask for information based on the user input, but you can add a third one.
 
-Leku will priories your data source looking for information. If no result is provided, Leku data sources will complete the information.
+Location Picker will priories your data source looking for information. If no result is provided, Location Picker data sources will complete the information.
 
 > This implementation shows how to only implement the Place API resolution. You can omit your repository from performing any query by returning `null` or `emptyList()`.
 ```kotlin
@@ -530,7 +531,7 @@ Available tracking events are:
 
 In few cases, the geocoding service from Android fails due to an issue with the NetworkLocator. The only way of fixing this is rebooting the device.
 
-In order to cover these cases, you can instruct Leku to use the Geocoding API. To enable it, just use the method '''withGeolocApiKey''' when invoking the LocationPicker.
+In order to cover these cases, you can instruct Location Picker to use the Geocoding API. To enable it, just use the method '''withGeolocApiKey''' when invoking the LocationPicker.
 
 You should provide your Server Key as parameter. Keep in mind that the free tier only allows 2,500 requests per day. You can track how many times is it used in the Developer Console from Google. 
 
@@ -634,12 +635,12 @@ Who made this
 [Diego Millán](https://github.com/DiegoMillanR) | [Gerard Pedreny](https://github.com/gerardpedrenyscmspain) | [Marc Serra](https://github.com/marcserrascmspain) | [Sergio Castillo](https://github.com/sergiocastilloscmspain) | [Bernat Borras](https://github.com/alorma) | [Cristian García](https://github.com/CristianGM)
 
 
-Apps using Leku
+Apps using Location Picker
 ---------------
 
-The following is a list of some of the public apps using Leku and are published on the Google Play Store.
+The following is a list of some of the public apps using Location Picker and are published on the Google Play Store.
 
-Want to add your app? Found an app that no longer works or no longer uses Leku? Please submit a pull request on GitHub to update this page!
+Want to add your app? Found an app that no longer works or no longer uses Location Picker? Please submit a pull request on GitHub to update this page!
 
 | <a href="https://play.google.com/store/apps/details?id=com.anuntis.segundamano"><img src="docs/images/vibbo_logo.png" align="left" width="68px" height="68px"/></a> | <a href="https://play.google.com/store/apps/details?id=com.scmspain.worksi"><img src="docs/images/worksi_logo.png" align="left" width="68px" height="68px"/></a> | <a href="https://play.google.com/store/apps/details?id=nl.hnogames.domoticz"><img src="docs/images/domoticz_logo.png" align="left" width="68px" height="68px"/></a>
 |---|---|---
@@ -650,7 +651,7 @@ Contribute
 ----------
 
 1. Create an issue to discuss about your idea
-2. [Fork it] (https://github.com/AdevintaSpain/leku/fork)
+2. [Fork it] (https://github.com/nmssalman/LocationPicker/fork)
 3. Create your feature branch (`git checkout -b my-new-feature`)
 4. Commit your changes (`git commit -am 'Add some feature'`)
 5. Push to the branch (`git push origin my-new-feature`)
@@ -661,7 +662,7 @@ Contribute
 Bugs and Feedback
 -----------------
 
-For bugs, questions and discussions please use the [Github Issues](https://github.com/AdevintaSpain/leku/issues).
+For bugs, questions and discussions please use the [Github Issues](https://github.com/nmssalman/LocationPicker/issues).
 
 
 License
